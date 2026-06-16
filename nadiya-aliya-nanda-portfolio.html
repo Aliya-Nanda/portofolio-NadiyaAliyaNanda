@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of Nadiya Aliya Nanda: Mechanical Engineering student at ITB, Structural & Mechanical Designer, CAD and Robotics enthusiast, and Google Student Ambassador 2026." />
+  <title>Nadiya Aliya Nanda | Engineering Career Portfolio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8f5ed;
+      --muted: #b7b3a8;
+      --soft: #817d74;
+      --bg: #080a0d;
+      --bg-2: #0e1217;
+      --panel: rgba(22, 26, 31, 0.72);
+      --panel-strong: rgba(33, 38, 44, 0.86);
+      --line: rgba(248, 245, 237, 0.13);
+      --teal: #3dd6c6;
+      --gold: #e7b75f;
+      --rose: #ef6f82;
+      --blue: #7aa7ff;
+      --green: #80d96f;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.032) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.026) 1px, transparent 1px),
+        linear-gradient(135deg, #07090c 0%, #10131a 43%, #07090c 100%);
+      background-size: 68px 68px, 68px 68px, 100% 100%;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -3;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(61, 214, 198, 0.16), transparent 34%),
+        radial-gradient(circle at 82% 9%, rgba(231, 183, 95, 0.13), transparent 31%),
+        radial-gradient(circle at 72% 82%, rgba(239, 111, 130, 0.12), transparent 36%);
+      filter: saturate(1.08);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background:
+        linear-gradient(rgba(255,255,255,0.035), transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025), transparent 1px);
+      background-size: 100% 7px, 7px 100%;
+      opacity: 0.12;
+      mix-blend-mode: screen;
+      animation: scan 12s linear infinite;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      z-index: 100;
+      background: linear-gradient(90deg, var(--teal), var(--gold), var(--rose));
+      box-shadow: 0 0 24px rgba(61, 214, 198, 0.42);
+    }
+
+    #network {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.54;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: fixed;
+      top: 14px;
+      left: 0;
+      width: 100%;
+      z-index: 90;
+      pointer-events: none;
+    }
+
+    .nav-inner {
+      pointer-events: auto;
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(8, 10, 13, 0.68);
+      backdrop-filter: blur(22px);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.28);
+      transition: background 260ms ease, transform 260ms ease, border-color 260ms ease;
+    }
+
+    .nav-inner.is-scrolled {
+      background: rgba(8, 10, 13, 0.88);
+      border-color: rgba(61, 214, 198, 0.24);
+      transform: translateY(-2px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      font-weight: 820;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(231,183,95,0.45);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(231,183,95,0.22), rgba(61,214,198,0.12));
+      color: var(--gold);
+      font-size: 0.78rem;
+      box-shadow: inset 0 0 22px rgba(231,183,95,0.08);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 740;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 11px 12px;
+      border-radius: var(--radius);
+      transition: color 220ms ease, background 220ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .nav-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 13px;
+      border-radius: var(--radius);
+      background: var(--ink);
+      color: #0b0d10;
+      font-size: 0.82rem;
+      font-weight: 850;
+      box-shadow: 0 10px 28px rgba(248,245,237,0.12);
+      white-space: nowrap;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+
+    .nav-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(61,214,198,0.18);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      padding: 120px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 8px 11px;
+      border: 1px solid rgba(61, 214, 198, 0.28);
+      border-radius: 999px;
+      background: rgba(61, 214, 198, 0.08);
+      color: #bdf8f1;
+      font-size: 0.75rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 0 0 rgba(61,214,198,0.7);
+      animation: pulse 1.8s ease-out infinite;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 24px;
+      font-size: clamp(3.2rem, 8vw, 7.6rem);
+      line-height: 0.88;
+      letter-spacing: 0;
+      max-width: 840px;
+    }
+
+    .hero-name {
+      display: block;
+      color: var(--ink);
+    }
+
+    .hero-role {
+      display: inline-block;
+      margin-top: 8px;
+      background: linear-gradient(90deg, var(--teal), var(--gold), var(--rose), var(--blue), var(--teal));
+      background-size: 260% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: ribbon 7s linear infinite;
+    }
+
+    .hero-copy {
+      margin-top: 26px;
+      max-width: 690px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.22rem);
+      line-height: 1.75;
+    }
+
+    .hero-copy strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.06);
+      color: var(--ink);
+      font-weight: 850;
+      font-size: 0.92rem;
+      transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      border-color: rgba(61,214,198,0.42);
+      background: rgba(61,214,198,0.11);
+      box-shadow: 0 16px 40px rgba(61,214,198,0.14);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--teal), var(--gold));
+      color: #080a0d;
+      border-color: transparent;
+      box-shadow: 0 18px 40px rgba(61,214,198,0.18);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #64eee2, #f3ca7a);
+      color: #080a0d;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .social {
+      display: inline-grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.055);
+      color: var(--ink);
+      transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+    }
+
+    .social:hover {
+      transform: translateY(-4px) rotate(-2deg);
+      border-color: rgba(231,183,95,0.45);
+      background: rgba(231,183,95,0.1);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 560px;
+      perspective: 1200px;
+    }
+
+    .visual-frame {
+      position: absolute;
+      inset: 42px 0 48px 20px;
+      border: 1px solid rgba(248,245,237,0.14);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.08), transparent 28%),
+        rgba(14, 18, 23, 0.58);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transform: rotateY(-8deg) rotateX(3deg);
+      transition: transform 500ms ease;
+    }
+
+    .visual-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(61,214,198,0.52), rgba(231,183,95,0.23), rgba(239,111,130,0.38));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .visual-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.04);
+      opacity: 0.93;
+    }
+
+    .floating-chip {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(8, 10, 13, 0.72);
+      backdrop-filter: blur(16px);
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 850;
+      box-shadow: 0 16px 45px rgba(0,0,0,0.34);
+      animation: float 5.5s ease-in-out infinite;
+    }
+
+    .floating-chip:nth-of-type(2) {
+      top: 22px;
+      right: 6px;
+      animation-delay: -1.3s;
+    }
+
+    .floating-chip:nth-of-type(3) {
+      left: 0;
+      top: 44%;
+      animation-delay: -2.7s;
+    }
+
+    .floating-chip:nth-of-type(4) {
+      right: 18px;
+      bottom: 28px;
+      animation-delay: -3.5s;
+    }
+
+    .chip-icon {
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      background: rgba(61,214,198,0.14);
+      color: var(--teal);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .stat {
+      padding: 17px 16px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+
+    .section {
+      padding: 92px 0;
+      position: relative;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(260px, 0.55fr);
+      gap: 26px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      margin-bottom: 13px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.6vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+
+    .marquee {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    .marquee-track span {
+      padding: 19px 22px;
+      color: var(--muted);
+      font-weight: 860;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .marquee-track i {
+      color: var(--teal);
+      font-style: normal;
+      margin: 0 4px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.55fr);
+      gap: 18px;
+    }
+
+    .statement {
+      padding: clamp(24px, 4vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .statement p {
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 1.02rem;
+    }
+
+    .statement p + p {
+      margin-top: 17px;
+    }
+
+    .statement strong {
+      color: var(--ink);
+    }
+
+    .profile-facts {
+      display: grid;
+      gap: 10px;
+    }
+
+    .fact {
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.045);
+    }
+
+    .fact svg {
+      width: 25px;
+      height: 25px;
+      color: var(--teal);
+    }
+
+    .fact span {
+      display: block;
+      color: var(--soft);
+      font-size: 0.78rem;
+      font-weight: 820;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 5px;
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .ikigai-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .ikigai-card {
+      position: relative;
+      min-height: 245px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.028));
+      overflow: hidden;
+      transition: transform 260ms ease, border-color 260ms ease, background 260ms ease;
+    }
+
+    .ikigai-card::before {
+      content: attr(data-symbol);
+      position: absolute;
+      right: 14px;
+      top: 8px;
+      color: rgba(248,245,237,0.06);
+      font-size: 5.4rem;
+      font-weight: 950;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .ikigai-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(231,183,95,0.42);
+      background: linear-gradient(180deg, rgba(231,183,95,0.12), rgba(61,214,198,0.045));
+    }
+
+    .ikigai-card h3 {
+      position: relative;
+      font-size: 1.07rem;
+      margin-bottom: 12px;
+    }
+
+    .ikigai-card p {
+      position: relative;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.93rem;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 22px;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background: linear-gradient(var(--teal), var(--gold), var(--rose));
+      opacity: 0.58;
+    }
+
+    .timeline-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.048);
+      transition: transform 260ms ease, background 260ms ease, border-color 260ms ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateX(6px);
+      background: rgba(255,255,255,0.075);
+      border-color: rgba(61,214,198,0.3);
+    }
+
+    .node {
+      position: relative;
+      z-index: 2;
+      width: 45px;
+      height: 45px;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      background: #10151a;
+      border: 1px solid rgba(61,214,198,0.38);
+      color: var(--teal);
+      font-weight: 950;
+      box-shadow: 0 0 0 5px rgba(61,214,198,0.055);
+    }
+
+    .timeline-card h3 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 1.06rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 26px;
+      padding: 6px 8px;
+      border: 1px solid rgba(248,245,237,0.12);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.045);
+      font-size: 0.72rem;
+      font-weight: 820;
+    }
+
+    .timeline-card p,
+    .project-card p,
+    .activity-card p,
+    .award p {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.93rem;
+    }
+
+    .timeline-card ul,
+    .project-card ul {
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .timeline-card li,
+    .project-card li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.9rem;
+    }
+
+    .timeline-card li::before,
+    .project-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.68em;
+      width: 7px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      position: relative;
+      min-height: 330px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      overflow: hidden;
+      transition: transform 260ms ease, border-color 260ms ease, background 260ms ease;
+    }
+
+    .project-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 22px 0 22px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal), var(--gold), var(--rose));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 300ms ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(231,183,95,0.34);
+      background: var(--panel-strong);
+    }
+
+    .project-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .project-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      color: var(--ink);
+      background: rgba(61,214,198,0.14);
+      border: 1px solid rgba(61,214,198,0.22);
+    }
+
+    .project-card:nth-child(2) .project-icon {
+      background: rgba(128,217,111,0.14);
+      border-color: rgba(128,217,111,0.22);
+    }
+
+    .project-card:nth-child(3) .project-icon {
+      background: rgba(122,167,255,0.14);
+      border-color: rgba(122,167,255,0.22);
+    }
+
+    .project-card:nth-child(4) .project-icon {
+      background: rgba(239,111,130,0.14);
+      border-color: rgba(239,111,130,0.22);
+    }
+
+    .project-card h3 {
+      font-size: 1.34rem;
+      line-height: 1.16;
+      margin-bottom: 8px;
+    }
+
+    .skills-wrap {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .skill-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.048);
+      padding: 22px;
+    }
+
+    .skill-panel h3 {
+      margin-bottom: 16px;
+      font-size: 1.14rem;
+    }
+
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .skill-cloud span {
+      padding: 9px 10px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(248,245,237,0.12);
+      background: rgba(255,255,255,0.045);
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 780;
+      transition: transform 220ms ease, color 220ms ease, border-color 220ms ease;
+    }
+
+    .skill-cloud span:hover {
+      transform: translateY(-3px);
+      color: var(--ink);
+      border-color: rgba(231,183,95,0.42);
+    }
+
+    .radar {
+      display: grid;
+      gap: 13px;
+    }
+
+    .bar {
+      display: grid;
+      gap: 8px;
+    }
+
+    .bar strong {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--ink);
+      font-size: 0.9rem;
+    }
+
+    .bar-track {
+      height: 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      overflow: hidden;
+    }
+
+    .bar-track span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--teal), var(--gold));
+      transition: width 1.2s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .activity-card {
+      position: relative;
+      min-height: 190px;
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.045);
+      overflow: hidden;
+      transition: transform 240ms ease, border-color 240ms ease;
+    }
+
+    .activity-card::before {
+      content: attr(data-index);
+      position: absolute;
+      right: 14px;
+      top: 9px;
+      color: rgba(248,245,237,0.065);
+      font-size: 3.2rem;
+      font-weight: 950;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(122,167,255,0.34);
+    }
+
+    .activity-card h3 {
+      position: relative;
+      margin-bottom: 9px;
+      font-size: 1.02rem;
+    }
+
+    .award-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .award {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.045);
+      transition: transform 240ms ease, border-color 240ms ease, background 240ms ease;
+    }
+
+    .award:hover {
+      transform: translateX(6px);
+      border-color: rgba(239,111,130,0.34);
+      background: rgba(255,255,255,0.067);
+    }
+
+    .award-icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: rgba(231,183,95,0.12);
+      color: var(--gold);
+      border: 1px solid rgba(231,183,95,0.24);
+    }
+
+    .award h3 {
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .contact {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 5vw, 48px);
+      border: 1px solid rgba(61,214,198,0.24);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(61,214,198,0.13), rgba(231,183,95,0.08) 48%, rgba(239,111,130,0.1)),
+        rgba(255,255,255,0.04);
+      box-shadow: var(--shadow);
+    }
+
+    .contact::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px dashed rgba(248,245,237,0.14);
+      border-radius: var(--radius);
+      pointer-events: none;
+    }
+
+    .contact-content {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(270px, 0.45fr);
+      gap: 26px;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(2.2rem, 5vw, 5rem);
+    }
+
+    .contact p {
+      margin-top: 17px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 700px;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(8,10,13,0.52);
+      font-weight: 850;
+      transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+    }
+
+    .contact-links a:hover {
+      transform: translateX(5px);
+      background: rgba(8,10,13,0.72);
+      border-color: rgba(61,214,198,0.34);
+    }
+
+    footer {
+      padding: 34px 0 44px;
+      color: var(--soft);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 90ms; }
+    .delay-2 { transition-delay: 180ms; }
+    .delay-3 { transition-delay: 270ms; }
+    .delay-4 { transition-delay: 360ms; }
+
+    svg {
+      width: 1.05em;
+      height: 1.05em;
+      flex: none;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(61,214,198,0.7); }
+      75%, 100% { box-shadow: 0 0 0 11px rgba(61,214,198,0); }
+    }
+
+    @keyframes ribbon {
+      to { background-position: 260% center; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+
+    @keyframes marquee {
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes scan {
+      to { background-position: 0 80px, 80px 0; }
+    }
+
+    @media (max-width: 1020px) {
+      .hero-grid,
+      .about-grid,
+      .skills-wrap,
+      .contact-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 460px;
+      }
+
+      .visual-frame {
+        inset: 30px 20px 40px;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .ikigai-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .activity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav {
+        top: 8px;
+      }
+
+      .nav-inner {
+        align-items: center;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-action {
+        min-height: 42px;
+        padding: 10px 11px;
+        font-size: 0.78rem;
+      }
+
+      .brand span:last-child {
+        max-width: 160px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .hero {
+        padding-top: 104px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 17vw, 4.8rem);
+      }
+
+      .stats,
+      .project-grid,
+      .activity-grid,
+      .ikigai-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 390px;
+      }
+
+      .visual-frame {
+        inset: 34px 0 28px;
+        transform: none;
+      }
+
+      .floating-chip {
+        font-size: 0.72rem;
+        padding: 8px 9px;
+      }
+
+      .floating-chip:nth-of-type(2) {
+        top: 6px;
+        right: 0;
+      }
+
+      .floating-chip:nth-of-type(3) {
+        left: 0;
+        top: auto;
+        bottom: 58px;
+      }
+
+      .floating-chip:nth-of-type(4) {
+        right: 0;
+        bottom: 6px;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .timeline-card {
+        grid-template-columns: 42px minmax(0, 1fr);
+        padding: 15px;
+      }
+
+      .node {
+        width: 40px;
+        height: 40px;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <canvas id="network" aria-hidden="true"></canvas>
+
+  <nav class="nav" aria-label="Navigasi utama">
+    <div class="nav-inner" id="nav">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark">NAN</span>
+        <span>Nadiya Aliya Nanda</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">Profile</a>
+        <a href="#ikigai">Ikigai</a>
+        <a href="#experience">Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-action" href="https://www.linkedin.com/in/nadiyaaliyananda" target="_blank" rel="noopener">
+        LinkedIn
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero shell">
+      <div class="hero-grid">
+        <div class="hero-copy-wrap reveal">
+          <div class="eyebrow"><span class="pulse-dot"></span> Mechanical Engineering & AI Literacy</div>
+          <h1>
+            <span class="hero-name">Nadiya Aliya Nanda</span>
+            <span class="hero-role">builds with purpose.</span>
+          </h1>
+          <p class="hero-copy">
+            A <strong>Mechanical Engineering student at ITB</strong> focused on structural design, CAD, robotics, sustainable research, and technology communication. This portfolio presents Nadiya's engineering, leadership, storytelling, and career direction: learning deeply, working collaboratively, and turning ideas into practical solutions.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">
+              View Projects
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn" href="#ikigai">
+              Read Ikigai
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="M19 12H5"/></svg>
+            </a>
+          </div>
+          <div class="social-row" aria-label="Social links">
+            <a class="social" href="https://www.instagram.com/nadiy.aaaaaaaa/" target="_blank" rel="noopener" aria-label="Instagram Nadiya Aliya Nanda">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+            </a>
+            <a class="social" href="https://www.youtube.com/@nadiyaaliyananda" target="_blank" rel="noopener" aria-label="YouTube Nadiya Aliya Nanda">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1C2 9 2 12 2 12s0 3 .4 4.8a3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1C22 15 22 12 22 12s0-3-.4-4.8ZM10 15.4V8.6l5.8 3.4L10 15.4Z"/></svg>
+            </a>
+            <a class="social" href="https://www.linkedin.com/in/nadiyaaliyananda" target="_blank" rel="noopener" aria-label="LinkedIn Nadiya Aliya Nanda">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.9H3.72V20h3.22V8.9ZM5.33 4a1.86 1.86 0 1 0 0 3.72A1.86 1.86 0 0 0 5.33 4Zm15 9.62c0-3.18-1.7-4.98-4.22-4.98-1.94 0-2.8 1.06-3.29 1.8V8.9H9.74V20h3.22v-5.5c0-1.45.28-2.85 2.07-2.85 1.76 0 1.79 1.65 1.79 2.95V20h3.22v-6.38h.29Z"/></svg>
+            </a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong data-count="2026">0</strong><span>Google Student Ambassador</span></div>
+            <div class="stat"><strong data-count="4">0</strong><span>Riset/proyek utama</span></div>
+            <div class="stat"><strong data-count="12">0</strong><span>Experiences and activities</span></div>
+            <div class="stat"><strong data-count="41">0</strong><span>Profile views in 7 days</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-2" aria-label="Visual engineering Nadiya">
+          <div class="visual-frame" id="visualFrame">
+            <img src="nadiya-engineering-visual.png" alt="Engineering blueprint illustration with CAD, rocketry, robotics, AI, and Nadiya Aliya Nanda initials" />
+          </div>
+          <div class="floating-chip">
+            <span class="chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></span>
+            CAD + SolidWorks
+          </div>
+          <div class="floating-chip">
+            <span class="chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M9 13h.01"/><path d="M15 13h.01"/><path d="M10 17h4"/></svg></span>
+            Robotics ITB
+          </div>
+          <div class="floating-chip">
+            <span class="chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16c0-6 7-12 7-12s7 6 7 12a7 7 0 0 1-14 0Z"/><path d="M12 22v-8"/></svg></span>
+            Sustainable Research
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="marquee" aria-label="Main focus areas">
+      <div class="marquee-track">
+        <span><i>+</i> Mechanical Design</span>
+        <span><i>+</i> Rocketry ITB</span>
+        <span><i>+</i> Robotics</span>
+        <span><i>+</i> Google AI Tools</span>
+        <span><i>+</i> Public Speaking</span>
+        <span><i>+</i> Circular Economy</span>
+        <span><i>+</i> Model United Nations</span>
+        <span><i>+</i> Education Volunteer</span>
+        <span><i>+</i> Mechanical Design</span>
+        <span><i>+</i> Rocketry ITB</span>
+        <span><i>+</i> Robotics</span>
+        <span><i>+</i> Google AI Tools</span>
+        <span><i>+</i> Public Speaking</span>
+        <span><i>+</i> Circular Economy</span>
+        <span><i>+</i> Model United Nations</span>
+        <span><i>+</i> Education Volunteer</span>
+      </div>
+    </section>
+
+    <section id="about" class="section shell">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Profile summary</div>
+          <h2>An engineer with a storyteller's clarity.</h2>
+        </div>
+        <p>Nadiya combines technical accuracy, research curiosity, and clear communication to build solutions that people can understand and use.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="statement reveal">
+          <p>
+            <strong>Nadiya Aliya Nanda</strong> is a Mechanical Engineering student at the <strong>Bandung Institute of Technology</strong> with strong interests in structural design, robotics, CAD, and mechanical system development. On campus, she is active in the <strong>Rocketry ITB</strong> and <strong>ITB Robotics Unit</strong> ecosystems, where she strengthens her skills in mechanical design, technical drawing interpretation, mass property analysis, and team-based engineering projects.
+          </p>
+          <p>
+            Beyond technical work, Nadiya grows through leadership, public speaking, mentoring, fundraising, and strategic communication. Her roles as a <strong>Google Student Ambassador 2026</strong>, <strong>BSI Scholarship Awardee</strong>, Novo Ranger, and ITBMUN committee member show a consistent pattern: learning quickly, connecting people, and making knowledge more accessible and useful.
+          </p>
+        </article>
+
+        <aside class="profile-facts reveal delay-1" aria-label="Fakta profil">
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-7h6v7"/></svg>
+            <div><span>Campus</span><strong>Bandung Institute of Technology, Mechanical Engineering</strong></div>
+          </div>
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.35 7-11a7 7 0 0 0-14 0c0 6.65 7 11 7 11Z"/><circle cx="12" cy="10" r="2"/></svg>
+            <div><span>Location</span><strong>Greater Bandung, Indonesia</strong></div>
+          </div>
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
+            <div><span>Education</span><strong>ITB 2025-present; SMA Alfa Centauri 2022-2025</strong></div>
+          </div>
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <div><span>Focus</span><strong>Mechanical design, AI literacy, circular economy, leadership</strong></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="ikigai" class="section shell">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Ikigai map</div>
+          <h2>Interests, strengths, impact, and career direction.</h2>
+        </div>
+        <p>This section translates Nadiya's academic journey, projects, and leadership experience into a clear personal career map.</p>
+      </div>
+      <div class="ikigai-grid">
+        <article class="ikigai-card reveal" data-symbol="01">
+          <h3>What Nadiya enjoys</h3>
+          <p>Learning new topics, scientific research, storytelling, public speaking, and making technical ideas easier to understand. From literacy work to AI tools, the common thread is communication that helps people take action.</p>
+        </article>
+        <article class="ikigai-card reveal delay-1" data-symbol="02">
+          <h3>What Nadiya can do well</h3>
+          <p>Mechanical design, technical drawing interpretation, CAD/SolidWorks, prompt engineering, research and analysis, formal documentation, project management, fundraising, cold outreach, and team coordination.</p>
+        </article>
+        <article class="ikigai-card reveal delay-2" data-symbol="03">
+          <h3>What the world needs</h3>
+          <p>Efficient engineering solutions, responsible AI literacy, sustainable innovation, industrial waste management, and education programs that help students feel more confident in pursuing opportunities.</p>
+        </article>
+        <article class="ikigai-card reveal delay-3" data-symbol="04">
+          <h3>What can create career value</h3>
+          <p>Roles in mechanical design, robotics, sustainable engineering, product and research development, AI education, program leadership, and strategic communication for technology communities.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section shell">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Experience</div>
+          <h2>Organizational journey, leadership, and contribution.</h2>
+        </div>
+        <p>Across campus, national communities, and social initiatives, Nadiya's experience shows a balanced mix of technical work and people-facing responsibilities.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-card reveal">
+          <div class="node">AI</div>
+          <div>
+            <h3>Google Student Ambassador 2026 <span class="tag">Mar 2026 - present</span></h3>
+            <p>Acts as a bridge between the Google ecosystem and campus communities to promote productive and responsible AI literacy.</p>
+            <ul>
+              <li>Promotes Gemini, NotebookLM, and Google Workspace for academic productivity.</li>
+              <li>Creates educational content and supports community workshops and seminars.</li>
+              <li>Collaborates with other ambassadors in Indonesia to expand safe and responsible AI practices.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal delay-1">
+          <div class="node">ME</div>
+          <div>
+            <h3>Rocketry & Robotics ITB <span class="tag">Structural & Mechanical</span></h3>
+            <p>An engineering environment to strengthen mechanical design, structures, robotics, CAD, and collaborative technical project development.</p>
+            <ul>
+              <li>Connects mechanics concepts with real design requirements and system needs.</li>
+              <li>Builds accuracy through technical drawings, materials, mounting concepts, and design analysis.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal delay-2">
+          <div class="node">BSI</div>
+          <div>
+            <h3>BSI Scholarship Awardee <span class="tag">Jul 2025 - present</span></h3>
+            <p>Part of a national scholarship community engaged in mentoring, self-reflection, and value-based discussions.</p>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal delay-3">
+          <div class="node">NV</div>
+          <div>
+            <h3>Novo Club by Paragon Corp - Novo Ranger Batch 4 <span class="tag">Apr 2026 - present</span></h3>
+            <p>Participates in a national leadership incubator focused on Design Thinking, Human-Centered Design, persuasive copywriting, and social innovation.</p>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal delay-1">
+          <div class="node">MUN</div>
+          <div>
+            <h3>ITBMUN - Fundraiser & Sponsorship Committee <span class="tag">Mar 2026 - present</span></h3>
+            <p>Supports financial acquisition strategy and corporate relations for ITB Model United Nations 2026.</p>
+            <ul>
+              <li>Prepares professional proposals and maps potential corporate sponsors.</li>
+              <li>Manages on-campus and digital fundraising campaigns, including vendor search and sales distribution.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal delay-2">
+          <div class="node">GM</div>
+          <div>
+            <h3>Ganesha MUN Club ITB - Academic Intern <span class="tag">Mar 2026 - present</span></h3>
+            <p>Supports academic and administrative preparation for Model United Nations conferences, including official documents, reports, and event materials.</p>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal delay-3">
+          <div class="node">ED</div>
+          <div>
+            <h3>Education & Community Volunteer <span class="tag">2023 - present</span></h3>
+            <p>Serves as a volunteer video editor at Yayasan Daarul Amanah Wattarbiyah, an education volunteer for Aksi Angkatan FTMD II, and an English Tutor at GET Fun English Bandung.</p>
+            <ul>
+              <li>Manages photo and video documentation, including social media highlights for visual storytelling.</li>
+              <li>Teaches basic English through games, visual aids, and storytelling.</li>
+              <li>Delivers education sessions about learning paths, career options, and scholarships.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal delay-1">
+          <div class="node">HS</div>
+          <div>
+            <h3>SMA Alfa Centauri - Class President & Project Leader <span class="tag">Jul 2022 - May 2025</span></h3>
+            <p>Acted as a bridge between students and teachers, led class projects, managed task delegation, delivered public presentations, and joined physics olympiad preparation.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section shell">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Projects & research</div>
+          <h2>Projects that connect design, data, and impact.</h2>
+        </div>
+        <p>Selected work across water generation, battery-material sustainability, AI literacy, and food innovation.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-top">
+            <div>
+              <h3>Atmospheric Water Generator Design Optimization</h3>
+              <span class="tag">PKM-KC | Mechanical Engineering + Astronomy</span>
+            </div>
+            <div class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2s7 7.2 7 13a7 7 0 0 1-14 0C5 9.2 12 2 12 2Z"/></svg></div>
+          </div>
+          <p>A tropical-climate AWG prototype with attention to energy efficiency, filtration, and outdoor structural durability.</p>
+          <ul>
+            <li>Designed a dual-layer filtration system to reduce pressure drop and prevent biofilm formation.</li>
+            <li>Compared Peltier and compressor-based refrigerant cycles to pursue better COP performance.</li>
+            <li>Designed a portable hybrid mounting system using an AL6005-T5 aluminum tripod and sandbag weights.</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <div class="project-top">
+            <div>
+              <h3>Nickel Laterite Tailings to EV Battery Cathode</h3>
+              <span class="tag">Circular Economy | Sustainable Mining</span>
+            </div>
+            <div class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 21c8 0 14-6 14-14V3h-4C7 3 3 8 3 15c0 3 2 6 2 6Z"/><path d="M3 21c4-4 7-7 13-9"/></svg></div>
+          </div>
+          <p>An integrative conceptual paper on converting nickel laterite tailings into a secondary source of EV battery cathode materials.</p>
+          <ul>
+            <li>Analyzed residual nickel and cobalt extraction from industrial mining waste.</li>
+            <li>Developed a circular economy framework to reduce hazardous waste risks.</li>
+            <li>Reviewed economic and environmental feasibility for more sustainable mining practices in Indonesia.</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal delay-2">
+          <div class="project-top">
+            <div>
+              <h3>Si Bijak: AI-Powered Digital Literacy Web App</h3>
+              <span class="tag">Samsung SFT 2026 | Hoax Analysis</span>
+            </div>
+            <div class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/><path d="M9 6h6"/></svg></div>
+          </div>
+          <p>A web application concept that supports digital literacy and hoax analysis through AI logic, prompt architecture, and user education.</p>
+          <ul>
+            <li>Developed prompt logic to help identify questionable claims.</li>
+            <li>Connected AI literacy with public needs so users receive insights while also learning critical thinking.</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal delay-3">
+          <div class="project-top">
+            <div>
+              <h3>D'Cassano: Banana Peel Ice Cream Innovation</h3>
+              <span class="tag">ASEAN Photo Essay Finalist</span>
+            </div>
+            <div class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c3 3 5 6 5 10a5 5 0 0 1-10 0c0-4 2-7 5-10Z"/><path d="M8 13c1.5 1.2 3 1.7 4 1.7s2.5-.5 4-1.7"/></svg></div>
+          </div>
+          <p>A sustainable food innovation that transforms banana peel waste into nutritious ice cream with organic Takir packaging.</p>
+          <ul>
+            <li>Responded to food waste and emission issues through a creative, educational, and community-based approach.</li>
+            <li>Selected as a finalist in the ASEAN Photo Essay Competition at The 2nd ICFN by SEAMEO RECFON.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section shell">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Skills</div>
+          <h2>Technical skills supported by strong communication.</h2>
+        </div>
+        <p>Nadiya's strengths include technical tools as well as the ability to explain ideas, engage people, and manage cross-disciplinary work.</p>
+      </div>
+
+      <div class="skills-wrap">
+        <article class="skill-panel reveal">
+          <h3>Skill cloud</h3>
+          <div class="skill-cloud">
+            <span>Design Thinking</span>
+            <span>Prompt Engineering</span>
+            <span>Artificial Intelligence</span>
+            <span>CAD & SolidWorks</span>
+            <span>Mechanical Design</span>
+            <span>Public Speaking</span>
+            <span>Leadership</span>
+            <span>Fundraising</span>
+            <span>Cold Outreach</span>
+            <span>Critical Thinking</span>
+            <span>Formatting Documents</span>
+            <span>Project Management</span>
+            <span>Research Skills</span>
+            <span>Circular Economy</span>
+            <span>Video Editing</span>
+            <span>Communication</span>
+          </div>
+        </article>
+        <article class="skill-panel reveal delay-1">
+          <h3>Strength radar</h3>
+          <div class="radar">
+            <div class="bar" data-width="88"><strong>Mechanical & CAD foundation <span>88%</span></strong><div class="bar-track"><span></span></div></div>
+            <div class="bar" data-width="92"><strong>Communication & storytelling <span>92%</span></strong><div class="bar-track"><span></span></div></div>
+            <div class="bar" data-width="86"><strong>AI literacy & prompting <span>86%</span></strong><div class="bar-track"><span></span></div></div>
+            <div class="bar" data-width="84"><strong>Research & structured writing <span>84%</span></strong><div class="bar-track"><span></span></div></div>
+            <div class="bar" data-width="89"><strong>Leadership & collaboration <span>89%</span></strong><div class="bar-track"><span></span></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="activity" class="section shell">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Activity</div>
+          <h2>Initiatives Nadiya shares and supports.</h2>
+        </div>
+        <p>Her professional activities reflect an active journey in ITB admission sharing, AI learning, research, literacy, and education volunteering.</p>
+      </div>
+
+      <div class="activity-grid">
+        <article class="activity-card reveal" data-index="01"><h3>Alumni speaker at SMA Alfa Centauri</h3><p>Shared the transition from high school to ITB, first-year adaptation, and learning strategies for campus life.</p></article>
+        <article class="activity-card reveal delay-1" data-index="02"><h3>Speaker at SSC Sony Sugema College</h3><p>Presented her ITB admission journey through SNBP and shared organizational experience with prospective students.</p></article>
+        <article class="activity-card reveal delay-2" data-index="03"><h3>Vibe Coding Challenge</h3><p>Explored AI and machine learning using Gemini and Vertex AI through a Google Cloud ID campaign.</p></article>
+        <article class="activity-card reveal delay-3" data-index="04"><h3>Gemini Certification</h3><p>Shared a Google for Education credential covering generative AI, research, ethics, security, and Workspace integration.</p></article>
+        <article class="activity-card reveal delay-1" data-index="05"><h3>SolidWorks learning journey</h3><p>Practiced reading technical drawings and analyzing mass properties using AISI 1020 steel as part of a recruitment task.</p></article>
+        <article class="activity-card reveal delay-2" data-index="06"><h3>Education Fair & FTMD sharing</h3><p>Served as a committee member and engineering-cluster speaker to share learning and adaptation strategies in FTMD ITB.</p></article>
+        <article class="activity-card reveal delay-3" data-index="07"><h3>Research journey</h3><p>Reflected on science exploration, scientific writing, teamwork, and the courage to learn new topics.</p></article>
+        <article class="activity-card reveal delay-1" data-index="08"><h3>Student literacy movement</h3><p>Led a student literacy community that adapted its activities to online formats during the pandemic.</p></article>
+        <article class="activity-card reveal delay-2" data-index="09"><h3>Foundation volunteer & English teaching</h3><p>Supported social media documentation for a local foundation and taught basic English to elementary students during school breaks.</p></article>
+      </div>
+    </section>
+
+    <section id="awards" class="section shell">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Honors & certification</div>
+          <h2>Achievements that strengthen the narrative.</h2>
+        </div>
+        <p>Nadiya's achievements range from storytelling and educational video to food innovation and AI certification.</p>
+      </div>
+
+      <div class="award-list">
+        <article class="award reveal">
+          <div class="award-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v6a5 5 0 0 1-10 0V4Z"/><path d="M5 6H3a2 2 0 0 0 2 2"/><path d="M19 6h2a2 2 0 0 1-2 2"/></svg></div>
+          <div><h3>1st Place - Regency-Level Storytelling Competition</h3><p>Won first place through the performance "Dongeng Sasakala Situ Bagendit", demonstrating strong public speaking and educational storytelling skills.</p></div>
+        </article>
+        <article class="award reveal delay-1">
+          <div class="award-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3 7h7l-5.6 4.2 2.2 6.8-6.6-4.1L5.4 20l2.2-6.8L2 9h7l3-7Z"/></svg></div>
+          <div><h3>ASEAN Photo Essay Competition Finalist - The 2nd ICFN</h3><p>Selected as a Southeast Asian regional finalist through D'Cassano, an eco-friendly ice cream project made from banana peel waste.</p></div>
+        </article>
+        <article class="award reveal delay-2">
+          <div class="award-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></div>
+          <div><h3>3rd Winner - CBP Rupiah Short Video Competition</h3><p>Won third place in a West Java high-school short video competition organized by Bank Indonesia.</p></div>
+        </article>
+        <article class="award reveal delay-3">
+          <div class="award-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 7v6c0 5 3.4 7.5 8 9 4.6-1.5 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-5"/></svg></div>
+          <div><h3>Gemini Certified Student - University</h3><p>A Google for Education credential covering prompt engineering, research and analysis, Workspace integration, and AI ethics and security.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section shell">
+      <div class="contact reveal">
+        <div class="contact-content">
+          <div>
+            <div class="kicker">Connect</div>
+            <h2>Let the next project move.</h2>
+            <p>For engineering collaboration, robotics projects, AI literacy initiatives, education sharing, sponsorship, or ITB admission storytelling, connect with Nadiya through the channels below.</p>
+          </div>
+          <div class="contact-links">
+            <a href="https://www.instagram.com/nadiy.aaaaaaaa/" target="_blank" rel="noopener"><span>Instagram</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
+            <a href="https://www.youtube.com/@nadiyaaliyananda" target="_blank" rel="noopener"><span>YouTube</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
+            <a href="https://www.linkedin.com/in/nadiyaaliyananda" target="_blank" rel="noopener"><span>LinkedIn</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <strong>Nadiya Aliya Nanda</strong>
+      <span>Engineering Career Portfolio - Greater Bandung, Indonesia - 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const nav = document.getElementById("nav");
+    const visualFrame = document.getElementById("visualFrame");
+    const counters = document.querySelectorAll("[data-count]");
+    const bars = document.querySelectorAll(".bar");
+    const canvas = document.getElementById("network");
+    const ctx = canvas.getContext("2d");
+    let width = 0;
+    let height = 0;
+    let particles = [];
+    let counterStarted = false;
+
+    const socialLinks = {
+      instagram: "https://www.instagram.com/nadiy.aaaaaaaa/",
+      youtube: "https://www.youtube.com/@nadiyaaliyananda",
+      linkedin: "https://www.linkedin.com/in/nadiyaaliyananda"
+    };
+
+    function resizeCanvas() {
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.floor(width * ratio);
+      canvas.height = Math.floor(height * ratio);
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      const count = width < 720 ? 38 : 68;
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.34,
+        vy: (Math.random() - 0.5) * 0.34,
+        r: Math.random() * 1.5 + 0.6
+      }));
+    }
+
+    function drawNetwork() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "rgba(61,214,198,0.55)";
+      ctx.strokeStyle = "rgba(231,183,95,0.12)";
+      for (const p of particles) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < -20) p.x = width + 20;
+        if (p.x > width + 20) p.x = -20;
+        if (p.y < -20) p.y = height + 20;
+        if (p.y > height + 20) p.y = -20;
+      }
+      for (let i = 0; i < particles.length; i++) {
+        const a = particles[i];
+        ctx.beginPath();
+        ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
+        ctx.fill();
+        for (let j = i + 1; j < particles.length; j++) {
+          const b = particles[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 135) {
+            ctx.globalAlpha = (135 - d) / 135;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+            ctx.globalAlpha = 1;
+          }
+        }
+      }
+      requestAnimationFrame(drawNetwork);
+    }
+
+    function updateProgress() {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const percentage = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+      progress.style.width = percentage + "%";
+      nav.classList.toggle("is-scrolled", window.scrollY > 24);
+    }
+
+    function runCounters() {
+      if (counterStarted) return;
+      counterStarted = true;
+      counters.forEach((counter) => {
+        const target = Number(counter.dataset.count);
+        const duration = target > 100 ? 1600 : 1100;
+        const start = performance.now();
+        function tick(now) {
+          const t = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          counter.textContent = Math.round(target * eased).toLocaleString("id-ID");
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        if (entry.target.classList.contains("stats")) runCounters();
+        if (entry.target.id === "skills") {
+          bars.forEach((bar) => {
+            const fill = bar.querySelector(".bar-track span");
+            fill.style.width = bar.dataset.width + "%";
+          });
+        }
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".reveal, .stats, #skills").forEach((el) => observer.observe(el));
+
+    document.addEventListener("pointermove", (event) => {
+      if (!visualFrame || window.innerWidth < 900) return;
+      const x = (event.clientX / window.innerWidth - 0.5) * 10;
+      const y = (event.clientY / window.innerHeight - 0.5) * -8;
+      visualFrame.style.transform = `rotateY(${x - 8}deg) rotateX(${y + 3}deg) translateY(${Math.abs(x) * -0.35}px)`;
+    });
+
+    document.querySelectorAll(".social, .btn, .contact-links a").forEach((item) => {
+      item.addEventListener("pointermove", (event) => {
+        const rect = item.getBoundingClientRect();
+        item.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+        item.style.setProperty("--my", `${event.clientY - rect.top}px`);
+      });
+    });
+
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+    drawNetwork();
+    updateProgress();
+    window.NadiyaSocialLinks = socialLinks;
+  </script>
+</body>
+</html>
